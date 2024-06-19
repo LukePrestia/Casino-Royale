@@ -1,0 +1,32 @@
+<body style="background-image: url(img/fondoverde.jpg); background-size: cover;">
+    </body>
+    <br>
+    <form action="/login" method="POST" class="d-flex justify-content-center">
+    <div style="max-width: 300px;" >  
+        {{#if log}}
+        <p>Usuario o Contraseña incorrecta<p>
+        {{/if}}
+            <div class="form-group">
+               <h1 class="entradaepica" style="justify-content: center; text-align: center;">Login</h1>
+            </div>
+            <div class="form-group">
+                <label for="usuario_id" style="color:white">Usuario</label>
+             <input type="text" class="form-control" id="usuario_id" name="usuario" value="" placeholder="Ingrese un usuario">
+           </div>
+            <div class="form-group">
+            <label for="password_id" style="color:white" >Password</label>
+            <input type="password" class="form-control" id="password_id" name="contrasena" placeholder="Contraseña">
+            </div>
+            <div class="form-group" style="justify-content: center; text-align: center;" >
+            <button type="submit" class="btn btn-primary" onclick="save()">Conectarse</button>
+            </div>
+        </div>
+    </form>
+<br>
+
+ <form action="/register" method="POST" class="d-flex justify-content-center">
+    <div class="form-group">
+    <button type="submit" class="btn btn-success">Registrarse</button>
+    </div>
+ </form>
+ 

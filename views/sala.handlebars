@@ -1,0 +1,46 @@
+<body style="background-image: url(img/fondoverde.jpg); background-size: cover;">
+    <div class="gridblackjack">
+
+     <br>
+        <button class="boton" style="grid-column:5" id="ready" onclick="listo()">Listo!</button>
+
+        <h4 id="cantjugadores" style="color:white; grid-column:6/ span 2; grid-row:1; align-self:center; justify-self: center;"> Jugadores listos: 0</h4>
+<!-- Jugador 1 -->
+            <img id="carta51" src="img/atras.png" class="estilocartas" style= "grid-column:5; grid-row:4; ">
+            <img id="carta41" src="img/atras.png" class="estilocartas" style= "grid-column:4; grid-row:4; ">
+            <img id="carta31" src="img/atras.png" class="estilocartas" style= "grid-column:3; grid-row:4; ">
+            <img id="carta21" src="img/atras.png" class="estilocartas" style= "grid-column:2; grid-row:4; ">
+            <img id="carta11" src="img/atras.png" class="estilocartas" style= "grid-column:1; grid-row:4; ">
+        <h4 id="jugador1"style= "color:white; grid-column:2/ span 2; grid-row:4; align-self:end; justify-self: center;"> Jugador 1</h4>
+        <h4  id="suma1" style= "color:white; grid-column:3/ span 2; grid-row:4; align-self:end; justify-self: center;"> Suma: 0</h4>
+        
+        <button onclick='pedirCarta(document.getElementById("sumaactual1").value)' disabled="true" id="pedir1" class="btn btn-success" style= "color:white; grid-column:2; grid-row:5; align-self:center;" > Pedir Carta </button>
+        <button onclick='quedarse(document.getElementById("sumaactual1").value)'id="quedarse1" disabled="true" class="btn btn-danger" style= "color:white; grid-column:4; grid-row:5; align-self:center;" > Quedarse </button>
+
+<!-- Jugador 2 -->
+            <img id="carta52" src="img/atras.png" class="estilocartas" style= "grid-column:11; grid-row:4; ">
+            <img id="carta42" src="img/atras.png" class="estilocartas" style= "grid-column:10; grid-row:4; ">
+            <img id="carta32" src="img/atras.png" class="estilocartas" style= "grid-column:9; grid-row:4; ">
+            <img id="carta22" src="img/atras.png" class="estilocartas" style= "grid-column:8; grid-row:4; ">
+            <img id="carta12" src="img/atras.png" class="estilocartas" style= "grid-column:7; grid-row:4; ">
+        <h4 id="jugador2" style= "color:white; grid-column:8/ span 2; grid-row:4; align-self:end; justify-self: center;"> Jugador 2</h4>
+        <h4 id="suma2" style= "color:white; grid-column:9/ span 2; grid-row:4; align-self:end; justify-self: center;"> Suma: 0</h4>
+    
+        <button id="pedir2" onclick='pedirCarta(document.getElementById("sumaactual2").value)' disabled="true" class="btn btn-success" style= "color:white; grid-column:8; grid-row:5; align-self:end; " > Pedir Carta </button>
+        <button id="quedarse2" onclick='quedarse(document.getElementById("sumaactual2").value)'disabled="true" class="btn btn-danger" style= "color:white; grid-column:10; grid-row:5; align-self:end;" > Quedarse </button>
+
+<!-- Crupier -->
+            <img id="carta53" src="img/atras.png" class="estilocartas" style= "grid-column:5/8; grid-row:2; align-self:start; justify-self: right;">
+            <img id="carta23" src="img/atras.png" class="estilocartas" style= "grid-column:5; grid-row:2; align-self:start; justify-self: right;">
+            <img id="carta33" src="img/atras.png" class="estilocartas" style= "grid-column:5/8; grid-row:2; align-self:start; justify-self: center;">
+            <img id="carta43" src="img/atras.png" class="estilocartas" style= "grid-column:7; grid-row:2; align-self:start; justify-self: left;">
+            <img id="carta13" src="img/atras.png" class="estilocartas" style= "grid-column:5/8; grid-row:2; align-self:start; justify-self: left;">
+        <h4 style= "color:white; grid-column:5/ span 2; grid-row:2; align-self:end; justify-self: center;"> Crupier</h4>
+        <h4 id="suma3" style= "color:white; grid-column:6/ span 2; grid-row:2; align-self:end; justify-self: center;"> Suma: 0</h4>
+
+    </div>
+</body>
+
+<input type="number" style ="display:none" id="sumaactual1" value="0"> </input>
+<input type="number" style ="display:none" id="sumaactual2" value="0"> </input>
+<input type="number" style ="display:none" id="sumaactual3" value="0"> </input>

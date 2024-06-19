@@ -1,0 +1,42 @@
+<header class="header" >
+    {{#if log}}
+        <div class="form-inline">
+
+        <form class="m-2" action="/BlackJack" method="POST">
+            <button type="submit"class="btn btn-primary mb-2">BlackJack</button>
+        </form>
+
+        <form class="m-2" action="/Ruleta" method="POST">
+            <button type="submit" class="btn btn-primary mb-2" >Ruleta</button>
+        </form>
+        <form class="m-2" action="/perfil"  method="POST">
+            <button type="submit" class="btn btn-primary mb-2" >Estadísticas</button>
+        </form>
+        <button onclick='fondos(document.getElementById("aksaplatita").value)' class="btn btn-primary mb-2"> Añadir fondos</button>
+        <input type="number" id="aksaplatita" value=0 min="1" max="1000" class="form-control" placeholder="Ingrese dinero"> 
+
+        <form class="m-2" action="/mercado"  method="POST">
+            <button type="submit" class="btn btn-primary mb-2" >Mercado</button>
+        </form>
+
+        {{#if juego}}
+        <h4 class="plata" id="plata_id">Tu Saldo es: {{usuario.0.plata}}</h4>
+        {{/if}}
+
+        
+    {{else}}
+
+    {{#if blackjack}}
+        <h4 style="display:inline; margin-top:25px;">Bienvenido a tu sala de Blackjack</h4> 
+        &nbsp; &nbsp; &nbsp; <h4 style="display:inline; margin-top: 25px;" >Dinero disponible: {{platinha}}</h4> 
+        &nbsp; &nbsp; &nbsp; <h4 style="display:inline; margin-top: 25px;" id="turno_id">Turno de J1</h4>
+        
+    {{else}}
+    <h1 class="entradaepica"> Casino Royale </h1>
+    {{/if}}
+
+    {{/if}}
+    </div>
+ </header>
+
+

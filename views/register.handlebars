@@ -1,0 +1,35 @@
+<body style="background-image: url(img/fondoverde.jpg); background-size: cover; color:white;">
+<br>
+<form action="adduser" method="POST" class="d-flex justify-content-center">
+    <div style="max-width: 300px;">  
+        {{#if log}}
+        <p>Usuario o Contraseña incorrecta<p>
+        {{/if}}
+            <div class="form-group">
+               <h1 class="entradaepica">¡Registrate!</h1>
+            </div>
+            <div class="form-group">
+                <label for="usuario_id">Usuario</label>
+             <input type="text" class="form-control" id="usuario_id" name="rusuario" value="" placeholder="Ingrese un nombre de usuario">
+           </div>
+            <div class="form-group">
+            <label for="password_id">Contraseña</label>
+            <input type="password" class="form-control" id="password_id" name="rcontrasena" placeholder="Contraseña">
+            </div>
+            <div class="form-group">
+            <label for="mail_id">Mail</label>
+            <input type="text" class="form-control" id="mail_id" name="rmail" placeholder="Mail">
+            </div>
+            <div class="form-group">
+            <label for="foto_id">Foto de Perfil</label>
+            <input type="foto" class="form-control" id="foto_id" name="rfoto" placeholder="Url Imagen">
+            </div>
+            <div class="form-group">
+            <button type="submit" class="btn btn-success">Registrarse</button>
+            </div>
+        </div>
+</form>
+<form action="/back" method="POST" class="d-flex justify-content-center">
+    <button type="submit" class="btn btn-primary">Volver</button>
+</form>
+</body>

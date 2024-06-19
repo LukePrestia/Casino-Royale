@@ -1,0 +1,37 @@
+<body style="background-image: url(img/Estanteria.jpg); background-size: cover;"></body>
+<form action="" id="formEncuesta" class="d-flex justify-content-center" name="registro">
+    
+    <div style="max-width: 2000px; " >
+    <div class="form-group">
+        <h1 style="color:white"> ¡Bienvenido al mercado!</h1>
+        <h2 style="color:white"> Utiliza tu dinero para comprar estos premios</h2>
+    </div> 
+    {{#if todocomprado}}
+    <div class="form-group">
+        <h2 style="color:white"> Ya has comprado todos los artículos, felicidades</h2>
+    </div> 
+    {{/if}}
+    {{#if osito}}
+    <div class="form-group" style="border-style:solid" id="osito">
+        <h1 class="entradaepica"> Osito de peluche facha</h1>
+        <img class="osito" src="img/Oso.png">
+        <button type="button" onclick="compraste('osito',100)" class="btn btn-success">Comprar 100$</button> 
+    </div>
+    {{/if}}
+    {{#if cupon}}
+    <div class="form-group" style="border-style:solid" id="cupon">
+        <h1 class="entradaepica"> Cupón (partida de conter con Facón) </h1>
+        <img class="osito" src="img/Cupon.png">
+        <button type="button" onclick="compraste('cupon',500)" class="btn btn-success">Comprar 500$</button> 
+    </div>
+    {{/if}}
+    {{#if mansion}}
+    <div class="form-group" style="border-style:solid" id="mansion" >
+        <h1 class="entradaepica"> Mansion en El Calafate (4 baños)</h1>
+        <img class="osito" src="img/Mansion.png">
+        <button type="button" onclick="compraste('mansion',10000)" class="btn btn-success">Comprar 10000$</button> 
+    </div>
+    {{/if}}
+    </div>
+</form>
+</body>
